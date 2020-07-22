@@ -4,11 +4,11 @@
     <div class="m-gnavi__lists">
       <nav class="m-gnavi__lists__inner">
         <ul class="m-gnavi__lists__content">
-          <li class="item is-active"><a href="#top">トップ</a></li>
-          <li class="item" data-target="skill"><a href="#skill">何が出来るの？</a></li>
-          <li class="item" data-target="profile"><a href="#profile">プロフィール</a></li>
-          <li class="item" data-target="activity"><a href="#blog">最近の活動</a></li>
-          <li class="item" data-target="contact"><a href="#contact">お問い合わせ</a></li>
+          <li @click.prevent="moveTo('top')" class="item is-active"><a href="#top">トップ</a></li>
+          <li @click.prevent="moveTo('skill')" class="item" data-target="skill"><a href="#skill">何が出来るの？</a></li>
+          <li @click.prevent="moveTo('profile')" class="item" data-target="profile"><a href="#profile">プロフィール</a></li>
+          <li @click.prevent="moveTo('blog')" class="item" data-target="activity"><a href="#blog">最近の活動</a></li>
+          <li @click.prevent="moveTo('contact')" class="item" data-target="contact"><a href="#contact">お問い合わせ</a></li>
         </ul> 
       </nav>
     </div>
@@ -25,7 +25,66 @@ export default {
     toggleHumburger(){
       const gnavi = document.querySelector(".m-gnavi");
       gnavi.classList.toggle("is-open");
+    },
+    moveTo(target){
+
+      const gnavi = document.querySelector(".m-gnavi");
+      gnavi.classList.remove("is-open");
+
+      let top = 0;
+          
+      if(target !== "top"){
+        // 画面上部から要素までの距離
+        const rectTop = document.querySelector(`#${target}`);
+        if(!rectTop) return;
+        
+        rectTop.getBoundingClientRect().top;
+        // 現在のスクロール距離
+        const offsetTop = window.pageYOffset
+        // スクロール位置に持たせるバッファ
+        const buffer = (window.innerWidth > 959) ? 80 : 60;
+        top = rectTop + offsetTop - buffer
+      }
+
+      
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      });
+
+
     }
+  },
+  mounted(){
+
+    return;
+      const items = document.querySelectorAll(".m-gnavi .item");
+      for(let item of items){
+        item.addEventListener("click",function(e){
+          e.preventDefault();
+          gnavi.classList.remove("is-open");
+          let target = this.querySelector("a").getAttribute("href");
+
+          let top = 0;
+          
+          if(target !== "#top"){
+            // 画面上部から要素までの距離
+            const rectTop = document.querySelector(target).getBoundingClientRect().top;
+            // 現在のスクロール距離
+            const offsetTop = window.pageYOffset
+            // スクロール位置に持たせるバッファ
+            const buffer = (window.innerWidth > 959) ? 80 : 60;
+            top = rectTop + offsetTop - buffer
+          }
+
+          
+          window.scrollTo({
+            top,
+            behavior: "smooth"
+          });
+          
+        });
+      }
   }
 }
 </script>
