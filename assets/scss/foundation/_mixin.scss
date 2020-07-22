@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Martel:800|Noto+Sans+JP:400,700|Inconsolata&display=swap');
+
+
+@mixin english{
+  font-family: 'Cabin', sans-serif;
+}
+@mixin number{
+  font-family: 'Martel', serif;
+}
+@mixin date {
+  font-family: 'Inconsolata', monospace;
+}
+
+$breakpoints: (
+  's' : 'screen and (max-width: 374px)',
+  'u-m' : 'screen and (max-width: 559px)',
+  'm' : 'screen and (min-width: 560px)',
+  'u-l' : 'screen and (max-width: 959px)',
+  'l' : 'screen and (min-width: 960px)',
+) !default;
+
+@mixin media($breakpoint: l) {
+  @media #{map-get($breakpoints,$breakpoint)}{
+    @content;
+  }
+}
+
+@mixin space ($prop,$position,$tick:4,$num:10)  {
+  
+  @for $i from 0 to $num {
+
+    &#{$i * $tick}{
+  
+      #{$prop}-#{$position}: $tick * $i + px;
+  
+      $szList: map-keys($breakpoints);
+  
+      @each $sz in $szList {
+  
+        @include media($sz){
+          &-#{$sz}{
+            #{$prop}-#{$position}: $tick * $i + px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@function color($color) {
+  $colors:(
+
+    wh: #fff,
+    bk0: #000,
+    bk3: #333,
+    base: #fff,
+    main: #f6f6f6,
+    accent: #f9f038,
+    accent2: #cc0000
+
+  ) !default;
+
+  @return map-get($colors,$color);
+}
