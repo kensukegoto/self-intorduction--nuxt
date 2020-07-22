@@ -25,6 +25,7 @@
 追加：componentsとscssディレクトリを整備
 追加：タイトル作成
 追加：ナビのレイアウト
+追加：ナビのJS
 ```
 
 ## Build Setup
