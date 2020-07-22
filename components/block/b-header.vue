@@ -2,21 +2,24 @@
   <header class="b-header">
     <div class="b-header__inner">
       <cTitle />
+      <mGnavi />
     </div>
   </header>
 </template>
 
 <script>
 import cTitle from "../component/c-title";
+import mGnavi from "../module/m-gnavi";
 
 export default {
   components: {
-    cTitle
+    cTitle,
+    mGnavi
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .b-header{
   position: fixed;
   top: 0;
