@@ -1,6 +1,7 @@
 # kensukegoto
 
-https://github.com/kensukegoto/nuxt-lots-of-js
+- [JSパーツサイト](https://github.com/kensukegoto/nuxt-lots-of-js)
+- [self-appeal](https://github.com/kensukegoto/self-appeal/tree/master/__dev/sass)
 
 ## tip
 
@@ -21,6 +22,8 @@ https://github.com/kensukegoto/nuxt-lots-of-js
 
 ```
 追加：Sassのミックスインをグローバルで使用できる
+追加：componentsとscssディレクトリを整備
+追加：タイトル作成
 ```
 
 ## Build Setup

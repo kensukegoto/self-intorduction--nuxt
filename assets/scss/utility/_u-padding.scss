@@ -1,0 +1,13 @@
+.u-pt{
+  @include space(margin,top,4,21);
+}
+.u-pb{
+  @include space(margin,bottom,4,21);
+}
+
+.u-pl{
+  @include space(margin,left,2,20);
+}
+.u-pr{
+  @include space(margin,right,2,20);
+}
