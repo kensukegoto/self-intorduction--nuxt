@@ -41,6 +41,7 @@ https://tic40.hatenablog.com/entry/2018/07/25/080000
 追加：profileを作成
 追加：blogを作成
 メモ：$attrsとinheritAttrs
+追加：contactを作成
 
 7/22
 追加：Sassのミックスインをグローバルで使用できる

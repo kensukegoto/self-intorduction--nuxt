@@ -1,44 +1,43 @@
 <template>
-  <header class="b-header">
-    <div class="b-header__inner">
-      <cTitle />
-      <mGnavi />
+  <section class="b-contact" id="contact">
+    <cHeading 
+      title="お問い合わせ"
+      sub="contact"
+    />
+    <div class="b-contact__inner">
+      <p>準備中</p>
     </div>
-  </header>
+  </section>
 </template>
 
 <script>
-import cTitle from "../component/c-title";
-import mGnavi from "../module/m-gnavi";
+import cHeading from "../component/c-heading";
 
 export default {
   components: {
-    cTitle,
-    mGnavi
+    cHeading
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.b-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  z-index: 10;
+.b-contact{
+  padding-top: 24px;
+  padding-bottom: 48px;
   @include media(l){
-    height: 80px;
+    padding-top: 32px;
   }
+
   &__inner{
-    height: 100%;
+    display: table;
+    height: 100px;
     width: 100%;
-    border-bottom: 5px solid color(accent);
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+    text-align: center;
+    
+    p{
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 
 }
