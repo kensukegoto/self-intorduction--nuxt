@@ -53,6 +53,11 @@ export default {
 
 
     }
+  },
+  mounted(){
+    this.$eventBus.$on('fire', ()=>{
+      console.log("子コンポーネントからのイベント発火キャッチ");
+    });
   }
 }
 </script>

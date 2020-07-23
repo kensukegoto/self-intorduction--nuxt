@@ -32,6 +32,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: "~/plugins/kensuke-click",mode: "client"},
+    { src: "~/plugins/hello-arg",mode: "client"},
+    { src: "~/plugins/event-bus",mode: "client"},
   ],
   /*
   ** Nuxt.js dev-modules

@@ -1,12 +1,22 @@
 <template>
-  <h1 class="c-title">
-    <b>後藤謙介</b><span>フロントもバックもクラウドも</span>
+  <h1 class="c-title" v-kensuke-click>
+    <!-- nameは必ず変数名 -->
+    <b v-hello-arg:後藤謙介="name">後藤謙介</b><span @click="fire">フロントもバックもクラウドも</span>
   </h1>
 </template>
 
 <script>
 export default {
-
+  data: () => {
+    return {
+      name : "c-title"
+    }
+  },
+  methods: {
+    fire : function(){
+      this.$eventBus.$emit('fire')
+    }
+  }
 }
 </script>
 

@@ -3,6 +3,10 @@
 - [JSパーツサイト](https://github.com/kensukegoto/nuxt-lots-of-js)
 - [self-appeal](https://github.com/kensukegoto/self-appeal/tree/master/__dev/sass)
 
+## プラグイン
+
+https://jp.vuejs.org/v2/guide/custom-directive.html
+
 ## $attrsとinheritAttrs
 
 ### $attrs
@@ -47,6 +51,7 @@ https://tic40.hatenablog.com/entry/2018/07/25/080000
 追加：mvのワードクラウド モジュールに読ませる
 修正：スムーススクロールが効かない
 変更：ナビの現在位置を現す●を削除
+追加：プラグイン自作してみる
 
 
 7/22
