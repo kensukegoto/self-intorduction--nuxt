@@ -1,0 +1,9 @@
+<svg viewBox="0 0 600 32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-family: 'Inconsolata', monospace;
+      letter-spacing: .1em;
+    }
+  </style>
+  <text font-size="32" stroke-width="2" stroke="#555" fill="#555" x="0" y="28px">YOU'VE GOT ME FEEL EMOTION</text>
+</svg>
