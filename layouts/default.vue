@@ -3,28 +3,3 @@
     <nuxt />
   </div>
 </template>
-
-<style lang="scss">
-// 基本的にタグ自体にスタイルを定義すること。
-// e.g. div {} p {}
-html{
-  font-size: 62.5%;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-body{
-
-  font-size: 1.6em;
-  @include media(u-m){
-    font-size: 1.6em;
-  }
-  @include media(m){
-    font-size: 1.6em;
-  }
-  @include media(u-l){
-    font-size: 1.6em;
-  }
-  @include media(l){
-    font-size: 1.6em;
-  }
-}
-</style>
