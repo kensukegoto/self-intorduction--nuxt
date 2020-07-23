@@ -30,6 +30,7 @@
 整理：ナビのSCSS
 追加：フッター作成
 修正：リセットCSSを効かせる
+追加：全ての画像をstaticに置く、favicon変更
 ```
 
 ## Build Setup
