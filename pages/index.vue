@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <!-- <bHeader /> -->
+    <bHeader />
+    <bMv />
     <bSkill />
     <bProfile />
     <bBlog />
@@ -11,6 +12,7 @@
 
 <script>
 import bHeader from '~/components/block/b-header';
+import bMv from '~/components/block/b-mv';
 import bSkill from '~/components/block/b-skill';
 import bProfile from '~/components/block/b-profile';
 import bBlog from '~/components/block/b-blog';
@@ -21,6 +23,7 @@ import bFooter from '~/components/block/b-footer';
 export default {
   components: {
     bHeader,
+    bMv,
     bSkill,
     bProfile,
     bBlog,
