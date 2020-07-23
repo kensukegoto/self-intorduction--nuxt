@@ -13,6 +13,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/image/favicon.ico' }
+    ],
+    script: [
+      { src : "https://d3js.org/d3.v5.min.js" },
+      { src : "/js/d3cloud.js" },
+      { src : "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" },
     ]
   },
   /*

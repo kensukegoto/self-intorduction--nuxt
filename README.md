@@ -43,6 +43,7 @@ https://tic40.hatenablog.com/entry/2018/07/25/080000
 メモ：$attrsとinheritAttrs
 追加：contactを作成
 追加：mvの写真とキャッチコピー
+追加：mvのワードクラウド（scriptタグでd3を読むver）
 
 7/22
 追加：Sassのミックスインをグローバルで使用できる

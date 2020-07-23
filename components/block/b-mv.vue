@@ -2,7 +2,7 @@
   <section class="b-mv">
     <div class="b-mv__inner">
       <cCopy />
-      <!-- <figure class="b-mv__cloud c-cloud"></figure> -->
+      <cCloud />
       <cMan />
     </div>
   </section>
@@ -11,10 +11,12 @@
 <script>
 import cMan from "../component/c-man";
 import cCopy from "../component/c-copy";
+import cCloud from "../component/c-cloud";
 export default {
   components:{
     cMan,
-    cCopy
+    cCopy,
+    cCloud
   }
 }
 </script>
