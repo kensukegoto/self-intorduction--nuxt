@@ -54,37 +54,6 @@ export default {
 
 
     }
-  },
-  mounted(){
-
-    return;
-      const items = document.querySelectorAll(".m-gnavi .item");
-      for(let item of items){
-        item.addEventListener("click",function(e){
-          e.preventDefault();
-          gnavi.classList.remove("is-open");
-          let target = this.querySelector("a").getAttribute("href");
-
-          let top = 0;
-          
-          if(target !== "#top"){
-            // 画面上部から要素までの距離
-            const rectTop = document.querySelector(target).getBoundingClientRect().top;
-            // 現在のスクロール距離
-            const offsetTop = window.pageYOffset
-            // スクロール位置に持たせるバッファ
-            const buffer = (window.innerWidth > 959) ? 80 : 60;
-            top = rectTop + offsetTop - buffer
-          }
-
-          
-          window.scrollTo({
-            top,
-            behavior: "smooth"
-          });
-          
-        });
-      }
   }
 }
 </script>
