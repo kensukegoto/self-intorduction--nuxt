@@ -35,10 +35,9 @@ export default {
           
       if(target !== "top"){
         // 画面上部から要素までの距離
-        const rectTop = document.querySelector(`#${target}`);
-        if(!rectTop) return;
-        
-        rectTop.getBoundingClientRect().top;
+        const targetElem = document.querySelector(`#${target}`);
+        if(!targetElem) return;
+        const rectTop = targetElem.getBoundingClientRect().top;
         // 現在のスクロール距離
         const offsetTop = window.pageYOffset
         // スクロール位置に持たせるバッファ
