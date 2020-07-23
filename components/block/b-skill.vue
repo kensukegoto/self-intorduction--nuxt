@@ -6,6 +6,7 @@
     />
     <div class="b-skill__inner">
       <mSkill />
+      <cGear />
     </div>
   </section>
 </template>
@@ -13,12 +14,13 @@
 <script>
 import cHeading from "../component/c-heading";
 import mSkill from "../module/m-skill";
+import cGear from "../component/c-gear";
 
 export default {
   components: {
     cHeading,
-    mSkill
- 
+    mSkill,
+    cGear
   }
 }
 </script>
