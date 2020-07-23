@@ -1,44 +1,45 @@
 <template>
-  <header class="b-header">
-    <div class="b-header__inner">
-      <cTitle />
-      <mGnavi />
-    </div>
-  </header>
+  <section class="b-profile" id="profile">
+    <cHeading 
+      title="プロフィール"
+      sub="PROFILE"
+    />
+    <mProfile
+      class="b-proffile__inner"
+    />
+  </section>
 </template>
 
 <script>
-import cTitle from "../component/c-title";
-import mGnavi from "../module/m-gnavi";
+import cHeading from "../component/c-heading";
+import mProfile from "../module/m-profile";
 
 export default {
   components: {
-    cTitle,
-    mGnavi
+    cHeading,
+    mProfile
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.b-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  z-index: 10;
+.b-profile{
+  padding-top: 24px;
+  padding-bottom: 48px;
   @include media(l){
-    height: 80px;
+    padding-top: 32px;
   }
+
   &__inner{
-    height: 100%;
-    width: 100%;
-    border-bottom: 5px solid color(accent);
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+    margin-top: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+    @include media(l){
+      width: 960px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
 }
