@@ -3,6 +3,17 @@
 - [JSパーツサイト](https://github.com/kensukegoto/nuxt-lots-of-js)
 - [self-appeal](https://github.com/kensukegoto/self-appeal/tree/master/__dev/sass)
 
+## $attrsとinheritAttrs
+
+### $attrs
+
+親コンポーネントに指定された属性（classとstyle除く）<br>
+属性を子コンポーネントで使用する場合に使用（？）
+
+### inheritAttrs
+
+https://tic40.hatenablog.com/entry/2018/07/25/080000
+
 ## tip
 
 ## commit履歴
@@ -29,6 +40,7 @@
 追加：ギアを動かす
 追加：profileを作成
 追加：blogを作成
+メモ：$attrsとinheritAttrs
 
 7/22
 追加：Sassのミックスインをグローバルで使用できる
