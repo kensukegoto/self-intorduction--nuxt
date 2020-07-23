@@ -1,44 +1,55 @@
 <template>
-  <header class="b-header">
-    <div class="b-header__inner">
-      <cTitle />
-      <mGnavi />
+  <section class="b-skill" id="skill">
+    <cHeading 
+      title="何が出来るの？"
+      sub="skill"
+    />
+    <div class="b-skill__inner">
+      <mSkill />
     </div>
-  </header>
+  </section>
 </template>
 
 <script>
-import cTitle from "../component/c-title";
-import mGnavi from "../module/m-gnavi";
+import cHeading from "../component/c-heading";
+import mSkill from "../module/m-skill";
 
 export default {
   components: {
-    cTitle,
-    mGnavi
+    cHeading,
+    mSkill
+ 
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.b-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  z-index: 10;
+.b-skill{
+  background-color: color(main);
+  padding-top: 24px;
+  padding-bottom: 48px;
+
   @include media(l){
-    height: 80px;
+    padding-top: 32px;
   }
+
   &__inner{
-    height: 100%;
-    width: 100%;
-    border-bottom: 5px solid color(accent);
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+    margin-top: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 0 8px;
+    padding-bottom: 20px;
+    background-color: color(base);
+    position: relative;
+    z-index: 0;
+    @include media(l){
+      width: 960px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 16px;
+      padding-bottom: 32px;
+    }
   }
 
 }
