@@ -4,7 +4,7 @@
     <div class="m-gnavi__lists">
       <nav class="m-gnavi__lists__inner">
         <ul class="m-gnavi__lists__content">
-          <li @click.prevent="moveTo('top')" class="item is-active"><a href="#top">トップ</a></li>
+          <li @click.prevent="moveTo('top')" class="item"><a href="#top">トップ</a></li>
           <li @click.prevent="moveTo('skill')" class="item" data-target="skill"><a href="#skill">何が出来るの？</a></li>
           <li @click.prevent="moveTo('profile')" class="item" data-target="profile"><a href="#profile">プロフィール</a></li>
           <li @click.prevent="moveTo('blog')" class="item" data-target="activity"><a href="#blog">最近の活動</a></li>
