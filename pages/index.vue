@@ -3,6 +3,7 @@
     <!-- <bHeader /> -->
     <bSkill />
     <bProfile />
+    <bBlog />
     <bFooter />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import bHeader from '~/components/block/b-header';
 import bSkill from '~/components/block/b-skill';
 import bProfile from '~/components/block/b-profile';
+import bBlog from '~/components/block/b-blog';
 import bFooter from '~/components/block/b-footer';
 
 export default {
@@ -18,6 +20,7 @@ export default {
     bHeader,
     bSkill,
     bProfile,
+    bBlog,
     bFooter
   }
 }

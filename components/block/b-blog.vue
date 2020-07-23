@@ -1,44 +1,61 @@
 <template>
-  <header class="b-header">
-    <div class="b-header__inner">
-      <cTitle />
-      <mGnavi />
-    </div>
-  </header>
+  <section class="b-blog" id="blog">
+    <cHeading 
+      title="最近の活動"
+      sub="BLOG"
+    />
+    <mBlog
+      class="b-blog__inner"
+      :blogs="blogs"
+    />
+    <cBlogMore />
+  </section>
 </template>
 
 <script>
-import cTitle from "../component/c-title";
-import mGnavi from "../module/m-gnavi";
+import cHeading from "../component/c-heading";
+import mBlog from "../module/m-blog";
+import cBlogMore from "../component/c-blog-more";
 
 export default {
   components: {
-    cTitle,
-    mGnavi
-  }
+    cHeading,
+    mBlog,
+    cBlogMore
+  },
+  data:()=>{
+    return {
+      blogs : [
+        {title:"「Hello,GitHub」に参加しました",date:"2020.3.8",img:"c-blog--01.jpg"},
+        {title:"「Hello,GitHub」に参加しました",date:"2020.3.8",img:"c-blog--02.jpg"},
+        {title:"「Hello,GitHub」に参加しました",date:"2020.3.8",img:"c-blog--03.jpg"}
+      ]
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.b-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  z-index: 10;
+  
+.b-blog{
+  background-color: color(main);
+  padding-top: 24px;
+  padding-bottom: 48px;
+
   @include media(l){
-    height: 80px;
+    padding-top: 32px;
   }
+
   &__inner{
-    height: 100%;
-    width: 100%;
-    border-bottom: 5px solid color(accent);
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+    margin-top: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+    @include media(l){
+      width: 960px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
 }
