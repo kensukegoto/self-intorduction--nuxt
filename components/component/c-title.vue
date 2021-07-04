@@ -1,7 +1,7 @@
 <template>
   <h1 class="c-title" v-kensuke-click>
     <!-- nameは必ず変数名 -->
-    <b v-hello-arg:後藤謙介="name">後藤謙介</b><span @click="fire">熱血系エンジニア</span>
+    <b v-hello-arg:後藤謙介="name">後藤謙介</b><span @click="fire">情熱系エンジニア</span>
   </h1>
 </template>
 

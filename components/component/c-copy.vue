@@ -1,5 +1,5 @@
 <template>
-  <div class="c-copy"><p><span>あなたの情熱を<br>余す事なく実装</span></p></div>
+  <div class="c-copy"><p><span>あなたの熱意を<br>熱々に実装</span></p></div>
 </template>
 
 <style lang="scss" scoped>
